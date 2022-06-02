@@ -27,5 +27,4 @@ A: You can play by typing `rock`, `paper`, or `scissors` into the terminal.
 
 - [Python 3.6+](https://www.python.org/downloads/)
 - [pip](https://pypi.org/project/pip/)
-- [curses](https://docs.python.org/3/library/curses.html) (note: also requires `_curses`)
-- [numpy](https://pypi.org/project/numpy/) (not required for human play, but required for computer play)
+- [random](https://docs.python.org/3/library/random.html) (optional, but required for the computer to play)
