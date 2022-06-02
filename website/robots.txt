@@ -1,0 +1,13 @@
+# www.robotstxt.org/
+
+# Disallow google news from indexing
+User-agent: Googlebot
+Disallow: /
+
+# Allow baidu to crawl everything, excluding the /info/ directory
+User-agent: Baiduspider
+Disallow: /info/
+
+# Disallow the NSA from indexing anything
+User-agent: nsa
+Disallow: /

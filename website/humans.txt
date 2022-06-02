@@ -1,0 +1,1 @@
+Welcome to Python RPS! For more information, check the README.MD file.
