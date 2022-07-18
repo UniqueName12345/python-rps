@@ -1,22 +1,4 @@
 import random
-import numpy as np
-import tensorflow as tf
-from tensorflow import keras
-
-
-model = keras.Sequential([
-    keras.layers.Dense(units=1, input_shape=[1])
-])
-
-model.compile(optimizer='sgd', loss='mean_squared_error')
-
-xs = np.array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0], dtype=float)
-ys = np.array([1.0, 1.5, 2.0, 2.5, 3.0, 3.5], dtype=float)
-
-model.fit(xs, ys, epochs=500)
-
-print(model.predict([7.0]))
-
 
 class Game:
     def __init__(self):
@@ -36,7 +18,7 @@ class Game:
     def play(self):
         while True:
             choice1 = input(f"{self.player1_name}: ").lower().strip()
-            choice2 = model.predict([random.randint(1, 3)])
+            choice2 = self.random.choice(list(self.choices.values()))
             print(choice2)
             if choice1 not in self.choices.values() or choice2 not in self.choices.values():
                 print("Invalid choice")
