@@ -28,5 +28,3 @@ A: You can play by typing `rock`, `paper`, or `scissors` into the terminal.
 - [Python 3.6+](https://www.python.org/downloads/)
 - [pip](https://pypi.org/project/pip/)
 - [random](https://docs.python.org/3/library/random.html) (optional, but required for the computer to play)
-- [numpy](https://www.numpy.org/) (optional, but required for the computer to play)
-- [tensorflow](https://www.tensorflow.org/) (optional, but required for the computer to play)
