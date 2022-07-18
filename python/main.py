@@ -3,7 +3,11 @@ import random
 
 class Game:
     def __init__(self):
-        self.choices = ["1", "2", "3"]
+        self.choices = {
+            "1": "rock",
+            "2": "paper",
+            "3": "scissors",
+        }
         self.player1_score = 0
         self.player2_score = 0
         self.player1_name = input("Player 1 name: ")
@@ -12,9 +16,9 @@ class Game:
 
     def play(self):
         while True:
-            choice1 = input(f"{self.player1_name}: ").lower()
-            choice2 = random.choice(self.choices)
-            if choice1 not in self.choices or choice2 not in self.choices:
+            choice1 = input(f"{self.player1_name}: ").lower().strip()
+            choice2 = random.choice(list(self.choices.values()))
+            if choice1 not in self.choices.values() or choice2 not in self.choices.values():
                 print("Invalid choice")
                 continue
             print(f"{self.player1_name} chose {choice1}")
@@ -22,9 +26,9 @@ class Game:
             if choice1 == choice2:
                 print("It's a tie!")
             elif (
-                (choice1 == "1" and choice2 == "3")
-                or (choice1 == "2" and choice2 == "1")
-                or (choice1 == "3" and choice2 == "2")
+                (choice1 == "rock" and choice2 == "scissors")
+                or (choice1 == "paper" and choice2 == "rock")
+                or (choice1 == "scissors" and choice2 == "paper")
             ):
                 print(f"{self.player1_name} wins!")
                 self.player1_score = 1
